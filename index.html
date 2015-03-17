@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title>YTListMaker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="vendor/css/portfolio-item.css" rel="stylesheet">
+
+    <link href="css/ytplaylistmaker.css" rel="stylesheet">
+     
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://hashtagplayer.kalkulus.net/">YTPlaylistMaker</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="" class="hpnav-about">About &amp; Contact</a></li>
+            <!-- <li><a href="" class="hpnav-contact">Contact</a></li> -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">YTPlaylistMaker <small> easiest and fastest way to create a YouTube playlist</small></h1>
+            </div>
+
+            <div class="col-lg-12 hpnav-div" id="about">
+                <div class="col-md-9">
+                <h3>About</h3>
+
+                <p>You know a bunch of songs you would like to quickly add to a new or existing YouTube playlist but you don't want to go and search for each one, click on it and then add it to a playlist.</p>
+
+                <p>Well, now you don't have to.</p>
+
+                <p>Just create a new playlist, or select and existing one, enter the names of the songs(preferably with artist names) and add them all together.</p>
+
+                <p>The system is not perfect, sometimes it might not find the song or get the version you don't like, but for the most part it will find an ok version of the song.</p>
+		<p>YouTube search is smart enought to give us good results and then I used Levenshtein distance algorythm to find the best matching title. The algorythm immplementation came from Andrew Hedges, you can check it out <a href="http://andrew.hedges.name/experiments/levenshtein/" target="_blank">here</a>.</p>
+
+                <p>Give it a go, and if you have any feedback feel free to contact me.</p>
+             
+                <a href="" id="close-about">Close this</a>
+              
+            </div>
+            <div class="col-md-3">
+              <h3>Contact</h3>
+              <p>If you have any feedback, suggestions and stuff you can contact me on <a href="http://twitter.com/kalkulus">Twitter</a> or <a href="http://facebook.com/kalkulus">Facebook</a></p>         
+            </div>        
+
+            <div class="clearfix"></div>                
+            </div>    
+
+        </div>
+
+        <div class="row" id="">   
+            <div id="login-container" class="pre-auth col-md-12 alert alert-warning" role="alert">
+                This application requires access to your YouTube account.
+                Please <a href="#" id="login-link">authorize</a> to continue.
+            </div>
+            <div class="col-md-6">
+                
+                <div id="newPlaylist">              
+                    <div id="form">
+                        <input type="hidden" id="newPlaylistId" value="" />
+                        <input type="hidden" id="newPlaylistName" value="" />
+                        <input id="name" type="text" placeholder="Enter new playlist name" />
+                        <button id="create" disabled="disabled">Create new playlist</button>
+                        <a href="" id="selectExistingPlaylist">Add to existing playlist</a>
+                    </div>
+                    <span class="status"></span>
+                    <a href="" id="createNewPlaylist">Create new playlist</a>
+                </div>
+                <div id="playlists">
+                    <select></select>                
+                    <span id="refresh" class="glyphicon glyphicon-refresh"  data-original-title="Refresh playlists"></span>
+                    <a href="" id="switchToNewPlaylist">Create new playlist</a>
+                </div>
+               
+                <div id="songs">
+                    <textarea placeholder="One song per line please. Thanks :)"></textarea><br />
+                    <button id="addSongs" disabled="disabled">Add songs to playlist</button>
+                    <span class="status"></span>
+                </div>
+                <div id="search-container">
+                </div>
+            </div>
+            <div class="col-md-6" id="log">
+            </div>
+        </div>
+    </div>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ytplaylistmaker.js?l"></script>
+    <script src="js/app.js"></script>
+    <script src="vendor/js/levenshtein.js?l"></script>
+    <script src="vendor/js/bootstrap.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>    
+  </body>
+</html>
+

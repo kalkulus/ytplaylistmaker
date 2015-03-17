@@ -1,0 +1,40 @@
+.current {
+	background-color: #EEEEEE;
+}
+
+.hpnav-div, 
+.ctrl .playing,
+.current .play,
+.tweet_url {
+	display: none;
+}
+
+#about {
+	border-bottom: 1px solid #EEEEEE;	
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+#login-container {
+	text-align: center;
+}
+
+#newPlaylist #form {
+	display: inline-block;
+}
+
+#refresh {
+	line-height: inherit;
+	top: 0;
+}
+
+#createNewPlaylist,
+#playlists {
+	display: none;
+}
+
+#songs textarea {
+	margin-top: 20px;
+	width: 500px;
+	height: 200px;
+}
